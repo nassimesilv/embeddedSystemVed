@@ -21,24 +21,20 @@ Target DLL:      Segger\JL2CM3.dll V2.99.23.0
 Dialog DLL:      TCM.DLL V1.27.0.0
  
 <h2>Project:</h2>
-C:\Users\Nass\Desktop\ESILV\Ved\nrfsdk 12.2.0\examples\peripheral\twi_scanner\pca10040\blank\arm5_no_packs\twi_scanner_pca10040.uvprojx
+C:\Users\Nass\Desktop\ESILV\Ved\embeddedSystemVed\examples\peripheral\twi fourche optique+affichage3ecrans+bouton poussoir\pca10040\blank\arm5_no_packs\twi_scanner_pca10040.uvprojx
 Project File Date:  03/11/2017
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 4 (build 422)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'nrf52832_xxaa'
 compiling main.c...
-..\..\..\main.c(169): warning:  #177-D: variable "reg2"  was declared but never referenced
-  		uint8_t reg2[1];
-..\..\..\main.c(171): warning:  #177-D: variable "i"  was declared but never referenced
-  		uint8_t i;
-..\..\..\main.c(277): warning:  #9-D: nested comment is not allowed
-  /*writeDigitNum(1, (counter / 100) % 10, false);
-..\..\..\main.c: 3 warnings, 0 errors
+..\..\..\main.c(27): warning:  #177-D: variable "counter"  was declared but never referenced
+    uint16_t counter = 0;
+..\..\..\main.c: 1 warning, 0 errors
 linking...
-Program Size: Code=8164 RO-data=1312 RW-data=32 ZI-data=9584  
+Program Size: Code=8628 RO-data=1312 RW-data=36 ZI-data=9588  
 FromELF: creating hex file...
-".\_build\nrf52832_xxaa.axf" - 0 Error(s), 3 Warning(s).
+".\_build\nrf52832_xxaa.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -64,8 +60,8 @@ Package Vendor: NordicSemiconductor
    * Component: ARM::CMSIS:CORE:4.3.0
 
    * Component: NordicSemiconductor::Device:Startup:8.11.1
-      Source file:   Device\Source\system_nrf52.c
       Source file:   Device\Source\arm\arm_startup_nrf52.s
+      Source file:   Device\Source\system_nrf52.c
       Include file:  Device\Include\system_nrf52.h
 Build Time Elapsed:  00:00:03
 </pre>
