@@ -5,7 +5,7 @@
 <h2>Tool Versions:</h2>
 IDE-Version: µVision V5.23.0.0
 Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: dahmani nassim, esilv, LIC=----
+License Information: Tim Lonchambon, Pôle Leonard de Vinci, LIC=----
  
 Tool Versions:
 Toolchain:       MDK-Lite  Version: 5.23
@@ -21,13 +21,20 @@ Target DLL:      Segger\JL2CM3.dll V2.99.23.0
 Dialog DLL:      TCM.DLL V1.27.0.0
  
 <h2>Project:</h2>
-C:\Users\Nass\Desktop\ESILV\Ved\embeddedSystem\examples\peripheral\fatfs\pca10040\blank\arm5_no_packs\fatfs_pca10040.uvprojx
-Project File Date:  03/07/2017
+C:\Users\TIM\Documents\ESILV\VED\SE\embeddedSystemVed\examples\peripheral\ecrit_valeur_fourche_optique_sur_carte_sd\pca10040\blank\arm5_no_packs\fatfs_pca10040.uvprojx
+Project File Date:  03/28/2017
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 4 (build 422)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'nrf52832_xxaa'
-".\_build\nrf52832_xxaa.axf" - 0 Error(s), 0 Warning(s).
+compiling main.c...
+..\..\..\main.c(66): warning:  #177-D: variable "dir"  was declared but never referenced
+      static DIR dir;
+..\..\..\main.c: 1 warning, 0 errors
+linking...
+Program Size: Code=14868 RO-data=1392 RW-data=52 ZI-data=9796  
+FromELF: creating hex file...
+".\_build\nrf52832_xxaa.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -54,9 +61,9 @@ Package Vendor: NordicSemiconductor
 
    * Component: NordicSemiconductor::Device:Startup:8.11.1
       Source file:   Device\Source\arm\arm_startup_nrf52.s
-      Include file:  Device\Include\system_nrf52.h
       Source file:   Device\Source\system_nrf52.c
-Build Time Elapsed:  00:00:00
+      Include file:  Device\Include\system_nrf52.h
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

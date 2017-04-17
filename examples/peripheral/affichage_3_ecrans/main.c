@@ -279,10 +279,10 @@ int main(void)
 		clear();
 		writeDisplay(HT16K33_ADDRESS);
 		writeDisplay(HT16K33_ADDRESS3);
-		/*pin_value = nrf_gpio_pin_read(HOA2001_PIN);
+		pin_value = nrf_gpio_pin_read(HOA2001_PIN);
 		NRF_LOG_INFO("pin_value");
 		writeDigitNum(0, pin_value, false);
-		writeDisplay(HT16K33_ADDRESS);*/
+		writeDisplay(HT16K33_ADDRESS);
 		
 		
 		
@@ -297,14 +297,14 @@ int main(void)
 		}
 		else 
 		{
-			writeDigitNum(0, 0, true);
+			writeDigitNum(5, 1, true);
 			writeDisplay(HT16K33_ADDRESS);
 		}
 		
 		
-		NRF_LOG_FLUSH();
+	//	NRF_LOG_FLUSH();
 		
-		/*if(pin_value)
+		if(pin_value == 0)
 		{
 			writeDigitNum(0, (counter2 / 1000), false);
 			writeDigitNum(1, (counter2 / 100) % 10, false);
@@ -313,6 +313,6 @@ int main(void)
 			writeDigitNum(5, counter2 % 10, false);
 			writeDisplay(HT16K33_ADDRESS3);
 			counter2++;
-		}*/
+		}
   }
 }

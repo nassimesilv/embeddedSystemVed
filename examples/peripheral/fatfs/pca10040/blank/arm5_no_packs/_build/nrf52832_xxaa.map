@@ -1602,177 +1602,177 @@ Memory Map of the image
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x00000000   0x00000400   Data   RO         1985    RESET               arm_startup_nrf52.o
-    0x00000400   0x00000000   Code   RO         2026  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x00000400   0x00000004   Code   RO         2326    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x00000404   0x00000004   Code   RO         2329    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x00000408   0x00000000   Code   RO         2331    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x00000408   0x00000000   Code   RO         2333    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x00000408   0x00000008   Code   RO         2334    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x00000410   0x00000000   Code   RO         2336    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x00000410   0x00000000   Code   RO         2338    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x00000410   0x00000004   Code   RO         2327    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
-    0x00000414   0x00000024   Code   RO         1986    .text               arm_startup_nrf52.o
-    0x00000438   0x00000008   Code   RO         2029    .text               mc_w.l(ctype_o.o)
-    0x00000440   0x00000024   Code   RO         2057    .text               mc_w.l(memcpya.o)
-    0x00000464   0x0000000e   Code   RO         2059    .text               mc_w.l(strlen.o)
-    0x00000472   0x00000062   Code   RO         2345    .text               mc_w.l(uldiv.o)
-    0x000004d4   0x00000024   Code   RO         2358    .text               mc_w.l(init.o)
-    0x000004f8   0x0000001e   Code   RO         2361    .text               mc_w.l(llshl.o)
-    0x00000516   0x00000020   Code   RO         2363    .text               mc_w.l(llushr.o)
+    0x00000000   0x00000400   Data   RO         1914    RESET               arm_startup_nrf52.o
+    0x00000400   0x00000000   Code   RO         1955  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x00000400   0x00000004   Code   RO         2255    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x00000404   0x00000004   Code   RO         2258    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x00000408   0x00000000   Code   RO         2260    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x00000408   0x00000000   Code   RO         2262    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x00000408   0x00000008   Code   RO         2263    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x00000410   0x00000000   Code   RO         2265    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x00000410   0x00000000   Code   RO         2267    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x00000410   0x00000004   Code   RO         2256    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x00000414   0x00000024   Code   RO         1915    .text               arm_startup_nrf52.o
+    0x00000438   0x00000008   Code   RO         1958    .text               mc_w.l(ctype_o.o)
+    0x00000440   0x00000024   Code   RO         1986    .text               mc_w.l(memcpya.o)
+    0x00000464   0x0000000e   Code   RO         1988    .text               mc_w.l(strlen.o)
+    0x00000472   0x00000062   Code   RO         2274    .text               mc_w.l(uldiv.o)
+    0x000004d4   0x00000024   Code   RO         2287    .text               mc_w.l(init.o)
+    0x000004f8   0x0000001e   Code   RO         2290    .text               mc_w.l(llshl.o)
+    0x00000516   0x00000020   Code   RO         2292    .text               mc_w.l(llushr.o)
     0x00000536   0x00000002   PAD
-    0x00000538   0x00000048   Code   RO          756    i.SPIM0_SPIS0_TWIM0_TWIS0_SPI0_TWI0_IRQHandler  nrf_drv_spi.o
-    0x00000580   0x0000029c   Code   RO         1994    i.SystemInit        system_nrf52.o
-    0x0000081c   0x0000001c   Code   RO          879    i.UARTE0_UART0_IRQHandler  nrf_drv_uart.o
-    0x00000838   0x00000030   Code   RO         2273    i.__0snprintf$8     mc_w.l(printf8.o)
-    0x00000868   0x0000000e   Code   RO         2372    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x00000876   0x00000002   Code   RO         2373    i.__scatterload_null  mc_w.l(handlers.o)
-    0x00000878   0x0000000e   Code   RO         2374    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x00000538   0x00000048   Code   RO          700    i.SPIM0_SPIS0_TWIM0_TWIS0_SPI0_TWI0_IRQHandler  nrf_drv_spi.o
+    0x00000580   0x0000029c   Code   RO         1923    i.SystemInit        system_nrf52.o
+    0x0000081c   0x0000001c   Code   RO          820    i.UARTE0_UART0_IRQHandler  nrf_drv_uart.o
+    0x00000838   0x00000030   Code   RO         2202    i.__0snprintf$8     mc_w.l(printf8.o)
+    0x00000868   0x0000000e   Code   RO         2301    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x00000876   0x00000002   Code   RO         2302    i.__scatterload_null  mc_w.l(handlers.o)
+    0x00000878   0x0000000e   Code   RO         2303    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x00000886   0x00000002   PAD
-    0x00000888   0x00000410   Code   RO         2279    i._printf_core      mc_w.l(printf8.o)
-    0x00000c98   0x00000024   Code   RO         2280    i._printf_post_padding  mc_w.l(printf8.o)
-    0x00000cbc   0x0000002e   Code   RO         2281    i._printf_pre_padding  mc_w.l(printf8.o)
-    0x00000cea   0x00000016   Code   RO         2282    i._snputc           mc_w.l(printf8.o)
-    0x00000d00   0x00000044   Code   RO         1156    i.app_error_fault_handler  app_error_weak.o
-    0x00000d44   0x00000016   Code   RO         1114    i.app_error_handler_bare  app_error.o
+    0x00000888   0x00000410   Code   RO         2208    i._printf_core      mc_w.l(printf8.o)
+    0x00000c98   0x00000024   Code   RO         2209    i._printf_post_padding  mc_w.l(printf8.o)
+    0x00000cbc   0x0000002e   Code   RO         2210    i._printf_pre_padding  mc_w.l(printf8.o)
+    0x00000cea   0x00000016   Code   RO         2211    i._snputc           mc_w.l(printf8.o)
+    0x00000d00   0x00000044   Code   RO         1091    i.app_error_fault_handler  app_error_weak.o
+    0x00000d44   0x00000016   Code   RO         1049    i.app_error_handler_bare  app_error.o
     0x00000d5a   0x00000002   PAD
-    0x00000d5c   0x00000058   Code   RO         1263    i.app_sdc_block_read  app_sdcard.o
-    0x00000db4   0x0000006c   Code   RO         1264    i.app_sdc_block_write  app_sdcard.o
-    0x00000e20   0x0000001c   Code   RO         1265    i.app_sdc_busy_check  app_sdcard.o
-    0x00000e3c   0x00000018   Code   RO         1266    i.app_sdc_info_get  app_sdcard.o
-    0x00000e54   0x000000c8   Code   RO         1267    i.app_sdc_init      app_sdcard.o
-    0x00000f1c   0x00000048   Code   RO         1268    i.app_sdc_uninit    app_sdcard.o
-    0x00000f64   0x000000b8   Code   RO          880    i.apply_config      nrf_drv_uart.o
-    0x0000101c   0x0000002c   Code   RO          335    i.block_dev_handler  diskio_blkdev.o
-    0x00001048   0x00000004   Code   RO         1531    i.block_dev_sdc_geometry  nrf_block_dev_sdc.o
-    0x0000104c   0x00000074   Code   RO         1532    i.block_dev_sdc_init  nrf_block_dev_sdc.o
-    0x000010c0   0x00000020   Code   RO         1533    i.block_dev_sdc_ioctl  nrf_block_dev_sdc.o
-    0x000010e0   0x0000007c   Code   RO         1534    i.block_dev_sdc_read_req  nrf_block_dev_sdc.o
-    0x0000115c   0x00000054   Code   RO         1535    i.block_dev_sdc_uninit  nrf_block_dev_sdc.o
-    0x000011b0   0x0000007c   Code   RO         1536    i.block_dev_sdc_write_req  nrf_block_dev_sdc.o
-    0x0000122c   0x00000012   Code   RO         1612    i.buf_len_update    nrf_log_backend_serial.o
+    0x00000d5c   0x00000058   Code   RO         1195    i.app_sdc_block_read  app_sdcard.o
+    0x00000db4   0x0000006c   Code   RO         1196    i.app_sdc_block_write  app_sdcard.o
+    0x00000e20   0x0000001c   Code   RO         1197    i.app_sdc_busy_check  app_sdcard.o
+    0x00000e3c   0x00000018   Code   RO         1198    i.app_sdc_info_get  app_sdcard.o
+    0x00000e54   0x000000c8   Code   RO         1199    i.app_sdc_init      app_sdcard.o
+    0x00000f1c   0x00000048   Code   RO         1200    i.app_sdc_uninit    app_sdcard.o
+    0x00000f64   0x000000b8   Code   RO          821    i.apply_config      nrf_drv_uart.o
+    0x0000101c   0x0000002c   Code   RO          304    i.block_dev_handler  diskio_blkdev.o
+    0x00001048   0x00000004   Code   RO         1460    i.block_dev_sdc_geometry  nrf_block_dev_sdc.o
+    0x0000104c   0x00000074   Code   RO         1461    i.block_dev_sdc_init  nrf_block_dev_sdc.o
+    0x000010c0   0x00000020   Code   RO         1462    i.block_dev_sdc_ioctl  nrf_block_dev_sdc.o
+    0x000010e0   0x0000007c   Code   RO         1463    i.block_dev_sdc_read_req  nrf_block_dev_sdc.o
+    0x0000115c   0x00000054   Code   RO         1464    i.block_dev_sdc_uninit  nrf_block_dev_sdc.o
+    0x000011b0   0x0000007c   Code   RO         1465    i.block_dev_sdc_write_req  nrf_block_dev_sdc.o
+    0x0000122c   0x00000012   Code   RO         1541    i.buf_len_update    nrf_log_backend_serial.o
     0x0000123e   0x00000002   PAD
-    0x00001240   0x00000070   Code   RO          447    i.check_fs          ff.o
-    0x000012b0   0x00000018   Code   RO          448    i.clust2sect        ff.o
-    0x000012c8   0x000000a4   Code   RO          449    i.create_chain      ff.o
-    0x0000136c   0x000000e4   Code   RO          450    i.create_name       ff.o
-    0x00001450   0x00000004   Code   RO          336    i.default_wait_func  diskio_blkdev.o
-    0x00001454   0x00000064   Code   RO          451    i.dir_find          ff.o
-    0x000014b8   0x000000f4   Code   RO          452    i.dir_next          ff.o
-    0x000015ac   0x00000066   Code   RO          454    i.dir_register      ff.o
-    0x00001612   0x00000082   Code   RO          456    i.dir_sdi           ff.o
-    0x00001694   0x00000080   Code   RO          337    i.disk_initialize   diskio_blkdev.o
-    0x00001714   0x0000007c   Code   RO          338    i.disk_ioctl        diskio_blkdev.o
-    0x00001790   0x0000007c   Code   RO          339    i.disk_read         diskio_blkdev.o
-    0x0000180c   0x00000020   Code   RO          340    i.disk_status       diskio_blkdev.o
-    0x0000182c   0x00000088   Code   RO          342    i.disk_write        diskio_blkdev.o
-    0x000018b4   0x0000000c   Code   RO          343    i.diskio_blockdev_register  diskio_blkdev.o
-    0x000018c0   0x0000001e   Code   RO          457    i.f_close           ff.o
+    0x00001240   0x00000070   Code   RO          397    i.check_fs          ff.o
+    0x000012b0   0x00000018   Code   RO          398    i.clust2sect        ff.o
+    0x000012c8   0x000000a4   Code   RO          399    i.create_chain      ff.o
+    0x0000136c   0x000000e4   Code   RO          400    i.create_name       ff.o
+    0x00001450   0x00000004   Code   RO          305    i.default_wait_func  diskio_blkdev.o
+    0x00001454   0x00000064   Code   RO          401    i.dir_find          ff.o
+    0x000014b8   0x000000f4   Code   RO          402    i.dir_next          ff.o
+    0x000015ac   0x00000066   Code   RO          404    i.dir_register      ff.o
+    0x00001612   0x00000082   Code   RO          406    i.dir_sdi           ff.o
+    0x00001694   0x00000080   Code   RO          306    i.disk_initialize   diskio_blkdev.o
+    0x00001714   0x0000007c   Code   RO          307    i.disk_ioctl        diskio_blkdev.o
+    0x00001790   0x0000007c   Code   RO          308    i.disk_read         diskio_blkdev.o
+    0x0000180c   0x00000020   Code   RO          309    i.disk_status       diskio_blkdev.o
+    0x0000182c   0x00000088   Code   RO          311    i.disk_write        diskio_blkdev.o
+    0x000018b4   0x0000000c   Code   RO          312    i.diskio_blockdev_register  diskio_blkdev.o
+    0x000018c0   0x0000001e   Code   RO          407    i.f_close           ff.o
     0x000018de   0x00000002   PAD
-    0x000018e0   0x0000004c   Code   RO          463    i.f_mount           ff.o
-    0x0000192c   0x000001b4   Code   RO          464    i.f_open            ff.o
-    0x00001ae0   0x00000090   Code   RO          470    i.f_sync            ff.o
-    0x00001b70   0x0000017e   Code   RO          473    i.f_write           ff.o
+    0x000018e0   0x0000004c   Code   RO          413    i.f_mount           ff.o
+    0x0000192c   0x000001b4   Code   RO          414    i.f_open            ff.o
+    0x00001ae0   0x00000090   Code   RO          420    i.f_sync            ff.o
+    0x00001b70   0x0000017e   Code   RO          423    i.f_write           ff.o
     0x00001cee   0x00000002   PAD
     0x00001cf0   0x00000220   Code   RO            4    i.fatfs_example     main.o
-    0x00001f10   0x0000024c   Code   RO          474    i.find_volume       ff.o
-    0x0000215c   0x00000074   Code   RO          475    i.follow_path       ff.o
-    0x000021d0   0x000000be   Code   RO          476    i.get_fat           ff.o
-    0x0000228e   0x0000003c   Code   RO          478    i.get_ldnumber      ff.o
+    0x00001f10   0x0000024c   Code   RO          424    i.find_volume       ff.o
+    0x0000215c   0x00000074   Code   RO          425    i.follow_path       ff.o
+    0x000021d0   0x000000be   Code   RO          426    i.get_fat           ff.o
+    0x0000228e   0x0000003c   Code   RO          428    i.get_ldnumber      ff.o
     0x000022ca   0x00000002   PAD
-    0x000022cc   0x00000078   Code   RO          881    i.interrupts_enable  nrf_drv_uart.o
-    0x00002344   0x00000026   Code   RO          479    i.ld_clust          ff.o
-    0x0000236a   0x00000016   Code   RO          480    i.ld_dword          ff.o
-    0x00002380   0x0000000a   Code   RO          481    i.ld_word           ff.o
+    0x000022cc   0x00000078   Code   RO          822    i.interrupts_enable  nrf_drv_uart.o
+    0x00002344   0x00000026   Code   RO          429    i.ld_clust          ff.o
+    0x0000236a   0x00000016   Code   RO          430    i.ld_dword          ff.o
+    0x00002380   0x0000000a   Code   RO          431    i.ld_word           ff.o
     0x0000238a   0x00000002   PAD
     0x0000238c   0x00000084   Code   RO            5    i.main              main.o
-    0x00002410   0x00000012   Code   RO          482    i.mem_cpy           ff.o
+    0x00002410   0x00000012   Code   RO          432    i.mem_cpy           ff.o
     0x00002422   0x00000002   PAD
-    0x00002424   0x0000000e   Code   RO          483    i.mem_set           ff.o
-    0x00002432   0x00000032   Code   RO          484    i.move_window       ff.o
-    0x00002464   0x00000006   Code   RO          344    i.nrf_blk_dev_ioctl  diskio_blkdev.o
-    0x0000246a   0x00000016   Code   RO          882    i.nrf_drv_common_irq_disable  nrf_drv_uart.o
-    0x00002480   0x00000038   Code   RO          712    i.nrf_drv_common_irq_enable  nrf_drv_common.o
-    0x000024b8   0x00000006   Code   RO          883    i.nrf_drv_get_IRQn  nrf_drv_uart.o
-    0x000024be   0x00000010   Code   RO          757    i.nrf_drv_is_in_RAM  nrf_drv_spi.o
-    0x000024ce   0x00000010   Code   RO          884    i.nrf_drv_is_in_RAM  nrf_drv_uart.o
+    0x00002424   0x0000000e   Code   RO          433    i.mem_set           ff.o
+    0x00002432   0x00000032   Code   RO          434    i.move_window       ff.o
+    0x00002464   0x00000006   Code   RO          313    i.nrf_blk_dev_ioctl  diskio_blkdev.o
+    0x0000246a   0x00000016   Code   RO          823    i.nrf_drv_common_irq_disable  nrf_drv_uart.o
+    0x00002480   0x00000038   Code   RO          659    i.nrf_drv_common_irq_enable  nrf_drv_common.o
+    0x000024b8   0x00000006   Code   RO          824    i.nrf_drv_get_IRQn  nrf_drv_uart.o
+    0x000024be   0x00000010   Code   RO          701    i.nrf_drv_is_in_RAM  nrf_drv_spi.o
+    0x000024ce   0x00000010   Code   RO          825    i.nrf_drv_is_in_RAM  nrf_drv_uart.o
     0x000024de   0x00000002   PAD
-    0x000024e0   0x0000011c   Code   RO          759    i.nrf_drv_spi_init  nrf_drv_spi.o
-    0x000025fc   0x0000001c   Code   RO          761    i.nrf_drv_spi_transfer  nrf_drv_spi.o
-    0x00002618   0x00000060   Code   RO          762    i.nrf_drv_spi_uninit  nrf_drv_spi.o
-    0x00002678   0x0000005c   Code   RO          763    i.nrf_drv_spi_xfer  nrf_drv_spi.o
-    0x000026d4   0x00000068   Code   RO          886    i.nrf_drv_uart_init  nrf_drv_uart.o
-    0x0000273c   0x0000010c   Code   RO          893    i.nrf_drv_uart_tx   nrf_drv_uart.o
-    0x00002848   0x00000018   Code   RO          895    i.nrf_drv_uart_tx_in_progress  nrf_drv_uart.o
-    0x00002860   0x00000054   Code   RO          896    i.nrf_drv_uart_uninit  nrf_drv_uart.o
-    0x000028b4   0x00000024   Code   RO          764    i.nrf_gpio_cfg      nrf_drv_spi.o
-    0x000028d8   0x00000024   Code   RO          897    i.nrf_gpio_cfg      nrf_drv_uart.o
-    0x000028fc   0x00000024   Code   RO         1269    i.nrf_gpio_cfg      app_sdcard.o
-    0x00002920   0x00000012   Code   RO          898    i.nrf_gpio_cfg_default  nrf_drv_uart.o
-    0x00002932   0x00000012   Code   RO          899    i.nrf_gpio_cfg_input  nrf_drv_uart.o
-    0x00002944   0x00000014   Code   RO          765    i.nrf_gpio_cfg_output  nrf_drv_spi.o
-    0x00002958   0x00000014   Code   RO          900    i.nrf_gpio_cfg_output  nrf_drv_uart.o
-    0x0000296c   0x0000000e   Code   RO          766    i.nrf_gpio_pin_set  nrf_drv_spi.o
-    0x0000297a   0x0000000e   Code   RO         1270    i.nrf_gpio_pin_set  app_sdcard.o
-    0x00002988   0x00000008   Code   RO         1614    i.nrf_log_backend_hexdump_handler_get  nrf_log_backend_serial.o
-    0x00002990   0x00000070   Code   RO         1615    i.nrf_log_backend_init  nrf_log_backend_serial.o
-    0x00002a00   0x0000012e   Code   RO         1616    i.nrf_log_backend_serial_hexdump_handler  nrf_log_backend_serial.o
-    0x00002b2e   0x00000114   Code   RO         1617    i.nrf_log_backend_serial_std_handler  nrf_log_backend_serial.o
+    0x000024e0   0x0000011c   Code   RO          703    i.nrf_drv_spi_init  nrf_drv_spi.o
+    0x000025fc   0x0000001c   Code   RO          705    i.nrf_drv_spi_transfer  nrf_drv_spi.o
+    0x00002618   0x00000060   Code   RO          706    i.nrf_drv_spi_uninit  nrf_drv_spi.o
+    0x00002678   0x0000005c   Code   RO          707    i.nrf_drv_spi_xfer  nrf_drv_spi.o
+    0x000026d4   0x00000068   Code   RO          827    i.nrf_drv_uart_init  nrf_drv_uart.o
+    0x0000273c   0x0000010c   Code   RO          834    i.nrf_drv_uart_tx   nrf_drv_uart.o
+    0x00002848   0x00000018   Code   RO          836    i.nrf_drv_uart_tx_in_progress  nrf_drv_uart.o
+    0x00002860   0x00000054   Code   RO          837    i.nrf_drv_uart_uninit  nrf_drv_uart.o
+    0x000028b4   0x00000024   Code   RO          708    i.nrf_gpio_cfg      nrf_drv_spi.o
+    0x000028d8   0x00000024   Code   RO          838    i.nrf_gpio_cfg      nrf_drv_uart.o
+    0x000028fc   0x00000024   Code   RO         1201    i.nrf_gpio_cfg      app_sdcard.o
+    0x00002920   0x00000012   Code   RO          839    i.nrf_gpio_cfg_default  nrf_drv_uart.o
+    0x00002932   0x00000012   Code   RO          840    i.nrf_gpio_cfg_input  nrf_drv_uart.o
+    0x00002944   0x00000014   Code   RO          709    i.nrf_gpio_cfg_output  nrf_drv_spi.o
+    0x00002958   0x00000014   Code   RO          841    i.nrf_gpio_cfg_output  nrf_drv_uart.o
+    0x0000296c   0x0000000e   Code   RO          710    i.nrf_gpio_pin_set  nrf_drv_spi.o
+    0x0000297a   0x0000000e   Code   RO         1202    i.nrf_gpio_pin_set  app_sdcard.o
+    0x00002988   0x00000008   Code   RO         1543    i.nrf_log_backend_hexdump_handler_get  nrf_log_backend_serial.o
+    0x00002990   0x00000070   Code   RO         1544    i.nrf_log_backend_init  nrf_log_backend_serial.o
+    0x00002a00   0x0000012e   Code   RO         1545    i.nrf_log_backend_serial_hexdump_handler  nrf_log_backend_serial.o
+    0x00002b2e   0x00000114   Code   RO         1546    i.nrf_log_backend_serial_std_handler  nrf_log_backend_serial.o
     0x00002c42   0x00000002   PAD
-    0x00002c44   0x00000008   Code   RO         1618    i.nrf_log_backend_std_handler_get  nrf_log_backend_serial.o
-    0x00002c4c   0x00000018   Code   RO         1709    i.nrf_log_direct_feed  nrf_log_frontend.o
-    0x00002c64   0x00000008   Code   RO         1713    i.nrf_log_frontend_std_0  nrf_log_frontend.o
-    0x00002c6c   0x0000000e   Code   RO         1714    i.nrf_log_frontend_std_1  nrf_log_frontend.o
+    0x00002c44   0x00000008   Code   RO         1547    i.nrf_log_backend_std_handler_get  nrf_log_backend_serial.o
+    0x00002c4c   0x00000018   Code   RO         1638    i.nrf_log_direct_feed  nrf_log_frontend.o
+    0x00002c64   0x00000008   Code   RO         1642    i.nrf_log_frontend_std_0  nrf_log_frontend.o
+    0x00002c6c   0x0000000e   Code   RO         1643    i.nrf_log_frontend_std_1  nrf_log_frontend.o
     0x00002c7a   0x00000002   PAD
-    0x00002c7c   0x0000000c   Code   RO         1721    i.nrf_log_handlers_set  nrf_log_frontend.o
-    0x00002c88   0x00000022   Code   RO         1722    i.nrf_log_init      nrf_log_frontend.o
-    0x00002caa   0x0000000a   Code   RO          767    i.nrf_spim_event_check  nrf_drv_spi.o
-    0x00002cb4   0x0000000a   Code   RO          901    i.nrf_uart_event_check  nrf_drv_uart.o
-    0x00002cbe   0x0000000c   Code   RO          902    i.nrf_uart_event_clear  nrf_drv_uart.o
-    0x00002cca   0x0000000c   Code   RO          903    i.nrf_uart_int_enable_check  nrf_drv_uart.o
-    0x00002cd6   0x0000000a   Code   RO          904    i.nrf_uarte_event_check  nrf_drv_uart.o
-    0x00002ce0   0x0000000c   Code   RO          905    i.nrf_uarte_event_clear  nrf_drv_uart.o
-    0x00002cec   0x00000078   Code   RO          906    i.pins_to_default   nrf_drv_uart.o
-    0x00002d64   0x000000ea   Code   RO          485    i.put_fat           ff.o
-    0x00002e4e   0x00000074   Code   RO          486    i.remove_chain      ff.o
-    0x00002ec2   0x00000032   Code   RO          907    i.rx_byte           nrf_drv_uart.o
-    0x00002ef4   0x00000018   Code   RO          908    i.rx_done_event     nrf_drv_uart.o
-    0x00002f0c   0x000000b8   Code   RO         1271    i.sdc_cmd           app_sdcard.o
-    0x00002fc4   0x00000090   Code   RO         1537    i.sdc_handler       nrf_block_dev_sdc.o
-    0x00003054   0x0000029c   Code   RO         1272    i.sdc_pt_identification  app_sdcard.o
-    0x000032f0   0x00000080   Code   RO         1273    i.sdc_pt_read       app_sdcard.o
-    0x00003370   0x00000160   Code   RO         1274    i.sdc_pt_sub_data_read  app_sdcard.o
-    0x000034d0   0x00000208   Code   RO         1275    i.sdc_pt_write      app_sdcard.o
-    0x000036d8   0x0000003c   Code   RO         1276    i.sdc_spi_transfer  app_sdcard.o
-    0x00003714   0x0000000c   Code   RO         1619    i.serial_is_busy    nrf_log_backend_serial.o
-    0x00003720   0x0000002c   Code   RO         1620    i.serial_tx         nrf_log_backend_serial.o
-    0x0000374c   0x000001cc   Code   RO         1277    i.spi_handler       app_sdcard.o
-    0x00003918   0x000000b2   Code   RO          768    i.spim_xfer         nrf_drv_spi.o
-    0x000039ca   0x00000028   Code   RO          487    i.st_clust          ff.o
-    0x000039f2   0x00000010   Code   RO          488    i.st_dword          ff.o
-    0x00003a02   0x00000008   Code   RO          489    i.st_word           ff.o
+    0x00002c7c   0x0000000c   Code   RO         1650    i.nrf_log_handlers_set  nrf_log_frontend.o
+    0x00002c88   0x00000022   Code   RO         1651    i.nrf_log_init      nrf_log_frontend.o
+    0x00002caa   0x0000000a   Code   RO          711    i.nrf_spim_event_check  nrf_drv_spi.o
+    0x00002cb4   0x0000000a   Code   RO          842    i.nrf_uart_event_check  nrf_drv_uart.o
+    0x00002cbe   0x0000000c   Code   RO          843    i.nrf_uart_event_clear  nrf_drv_uart.o
+    0x00002cca   0x0000000c   Code   RO          844    i.nrf_uart_int_enable_check  nrf_drv_uart.o
+    0x00002cd6   0x0000000a   Code   RO          845    i.nrf_uarte_event_check  nrf_drv_uart.o
+    0x00002ce0   0x0000000c   Code   RO          846    i.nrf_uarte_event_clear  nrf_drv_uart.o
+    0x00002cec   0x00000078   Code   RO          847    i.pins_to_default   nrf_drv_uart.o
+    0x00002d64   0x000000ea   Code   RO          435    i.put_fat           ff.o
+    0x00002e4e   0x00000074   Code   RO          436    i.remove_chain      ff.o
+    0x00002ec2   0x00000032   Code   RO          848    i.rx_byte           nrf_drv_uart.o
+    0x00002ef4   0x00000018   Code   RO          849    i.rx_done_event     nrf_drv_uart.o
+    0x00002f0c   0x000000b8   Code   RO         1203    i.sdc_cmd           app_sdcard.o
+    0x00002fc4   0x00000090   Code   RO         1466    i.sdc_handler       nrf_block_dev_sdc.o
+    0x00003054   0x0000029c   Code   RO         1204    i.sdc_pt_identification  app_sdcard.o
+    0x000032f0   0x00000080   Code   RO         1205    i.sdc_pt_read       app_sdcard.o
+    0x00003370   0x00000160   Code   RO         1206    i.sdc_pt_sub_data_read  app_sdcard.o
+    0x000034d0   0x00000208   Code   RO         1207    i.sdc_pt_write      app_sdcard.o
+    0x000036d8   0x0000003c   Code   RO         1208    i.sdc_spi_transfer  app_sdcard.o
+    0x00003714   0x0000000c   Code   RO         1548    i.serial_is_busy    nrf_log_backend_serial.o
+    0x00003720   0x0000002c   Code   RO         1549    i.serial_tx         nrf_log_backend_serial.o
+    0x0000374c   0x000001cc   Code   RO         1209    i.spi_handler       app_sdcard.o
+    0x00003918   0x000000b2   Code   RO          712    i.spim_xfer         nrf_drv_spi.o
+    0x000039ca   0x00000028   Code   RO          437    i.st_clust          ff.o
+    0x000039f2   0x00000010   Code   RO          438    i.st_dword          ff.o
+    0x00003a02   0x00000008   Code   RO          439    i.st_word           ff.o
     0x00003a0a   0x00000002   PAD
-    0x00003a0c   0x00000088   Code   RO          490    i.sync_fs           ff.o
-    0x00003a94   0x00000052   Code   RO          491    i.sync_window       ff.o
+    0x00003a0c   0x00000088   Code   RO          440    i.sync_fs           ff.o
+    0x00003a94   0x00000052   Code   RO          441    i.sync_window       ff.o
     0x00003ae6   0x00000002   PAD
-    0x00003ae8   0x00000034   Code   RO         1621    i.timestamp_process  nrf_log_backend_serial.o
-    0x00003b1c   0x00000020   Code   RO          910    i.tx_byte           nrf_drv_uart.o
-    0x00003b3c   0x0000001c   Code   RO          911    i.tx_done_event     nrf_drv_uart.o
-    0x00003b58   0x00000010   Code   RO         1622    i.uart_event_handler  nrf_log_backend_serial.o
-    0x00003b68   0x0000011e   Code   RO          912    i.uart_irq_handler  nrf_drv_uart.o
-    0x00003c86   0x000000f0   Code   RO          913    i.uarte_irq_handler  nrf_drv_uart.o
-    0x00003d76   0x00000032   Code   RO          492    i.validate          ff.o
+    0x00003ae8   0x00000034   Code   RO         1550    i.timestamp_process  nrf_log_backend_serial.o
+    0x00003b1c   0x00000020   Code   RO          851    i.tx_byte           nrf_drv_uart.o
+    0x00003b3c   0x0000001c   Code   RO          852    i.tx_done_event     nrf_drv_uart.o
+    0x00003b58   0x00000010   Code   RO         1551    i.uart_event_handler  nrf_log_backend_serial.o
+    0x00003b68   0x0000011e   Code   RO          853    i.uart_irq_handler  nrf_drv_uart.o
+    0x00003c86   0x000000f0   Code   RO          854    i.uarte_irq_handler  nrf_drv_uart.o
+    0x00003d76   0x00000032   Code   RO          442    i.validate          ff.o
     0x00003da8   0x0000001c   Data   RO            8    .constdata          main.o
-    0x00003dc4   0x00000018   Data   RO         1279    .constdata          app_sdcard.o
-    0x00003ddc   0x00000018   Data   RO         1538    .constdata          nrf_block_dev_sdc.o
-    0x00003df4   0x00000048   Data   RO         1539    .constdata          nrf_block_dev_sdc.o
-    0x00003e3c   0x00000020   Data   RO         1625    .constdata          nrf_log_backend_serial.o
-    0x00003e5c   0x00000081   Data   RO         2030    .constdata          mc_w.l(ctype_o.o)
+    0x00003dc4   0x00000018   Data   RO         1211    .constdata          app_sdcard.o
+    0x00003ddc   0x00000018   Data   RO         1467    .constdata          nrf_block_dev_sdc.o
+    0x00003df4   0x00000048   Data   RO         1468    .constdata          nrf_block_dev_sdc.o
+    0x00003e3c   0x00000020   Data   RO         1554    .constdata          nrf_log_backend_serial.o
+    0x00003e5c   0x00000081   Data   RO         1959    .constdata          mc_w.l(ctype_o.o)
     0x00003edd   0x00000003   PAD
-    0x00003ee0   0x00000004   Data   RO         2031    .constdata          mc_w.l(ctype_o.o)
+    0x00003ee0   0x00000004   Data   RO         1960    .constdata          mc_w.l(ctype_o.o)
     0x00003ee4   0x00000013   Data   RO            9    .conststring        main.o
     0x00003ef7   0x00000001   PAD
-    0x00003ef8   0x00000020   Data   RO         2370    Region$$Table       anon$$obj.o
+    0x00003ef8   0x00000020   Data   RO         2299    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00002678, Max: 0x00010000, ABSOLUTE)
@@ -1780,19 +1780,19 @@ Memory Map of the image
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x20000000   0x0000000c   Data   RW           10    .data               main.o
-    0x2000000c   0x00000008   Data   RW          345    .data               diskio_blkdev.o
-    0x20000014   0x00000008   Data   RW          494    .data               ff.o
-    0x2000001c   0x00000008   Data   RW         1540    .data               nrf_block_dev_sdc.o
-    0x20000024   0x0000000c   Data   RW         1626    .data               nrf_log_backend_serial.o
-    0x20000030   0x00000004   Data   RW         1995    .data               system_nrf52.o
+    0x2000000c   0x00000008   Data   RW          314    .data               diskio_blkdev.o
+    0x20000014   0x00000008   Data   RW          444    .data               ff.o
+    0x2000001c   0x00000008   Data   RW         1469    .data               nrf_block_dev_sdc.o
+    0x20000024   0x0000000c   Data   RW         1555    .data               nrf_log_backend_serial.o
+    0x20000030   0x00000004   Data   RW         1924    .data               system_nrf52.o
     0x20000034   0x00000470   Zero   RW            6    .bss                main.o
     0x200004a4   0x0000001c   Zero   RW            7    .bss                main.o
-    0x200004c0   0x00000020   Zero   RW          769    .bss                nrf_drv_spi.o
-    0x200004e0   0x00000020   Zero   RW          914    .bss                nrf_drv_uart.o
-    0x20000500   0x0000005c   Zero   RW         1278    .bss                app_sdcard.o
-    0x2000055c   0x00000100   Zero   RW         1623    .bss                nrf_log_backend_serial.o
-    0x2000065c   0x0000001c   Zero   RW         1724    .bss                nrf_log_frontend.o
-    0x20000678   0x00002000   Zero   RW         1983    STACK               arm_startup_nrf52.o
+    0x200004c0   0x00000020   Zero   RW          713    .bss                nrf_drv_spi.o
+    0x200004e0   0x00000020   Zero   RW          855    .bss                nrf_drv_uart.o
+    0x20000500   0x0000005c   Zero   RW         1210    .bss                app_sdcard.o
+    0x2000055c   0x00000100   Zero   RW         1552    .bss                nrf_log_backend_serial.o
+    0x2000065c   0x0000001c   Zero   RW         1653    .bss                nrf_log_frontend.o
+    0x20000678   0x00002000   Zero   RW         1912    STACK               arm_startup_nrf52.o
 
 
 ==============================================================================
@@ -1802,25 +1802,24 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-        22          0          0          0          0       2213   app_error.o
-        68         34          0          0          0      27353   app_error_weak.o
-      2942         86         24          0         92      30867   app_sdcard.o
-         0          0          0          0          0       5820   app_uart_fifo.o
+        22          0          0          0          0       2229   app_error.o
+        68         34          0          0          0      27361   app_error_weak.o
+      2942         86         24          0         92      29715   app_sdcard.o
+         0          0          0          0          0       5836   app_uart_fifo.o
         36          8       1024          0       8192        912   arm_startup_nrf52.o
-         0          0          0          0          0       2319   boards.o
-       610         44          0          8          0      13689   diskio_blkdev.o
-      3960         64          0          8          0      34052   ff.o
-       676        408         47         12       1164      52829   main.o
-       628         48         96          8          0      12083   nrf_block_dev_sdc.o
-        56          0          0          0          0      27543   nrf_drv_common.o
-       846         28          0          0         32      51476   nrf_drv_spi.o
-      1784         60          0          0         32      41296   nrf_drv_uart.o
-       848         56         32         12        256      11055   nrf_log_backend_serial.o
-        92          8          0          0         28       6670   nrf_log_frontend.o
-       668         58          0          4          0       2695   system_nrf52.o
+       610         44          0          8          0      12357   diskio_blkdev.o
+      3960         64          0          8          0      34324   ff.o
+       676        408         47         12       1164      54133   main.o
+       628         48         96          8          0      12171   nrf_block_dev_sdc.o
+        56          0          0          0          0      27551   nrf_drv_common.o
+       846         28          0          0         32      51612   nrf_drv_spi.o
+      1784         60          0          0         32      40352   nrf_drv_uart.o
+       848         56         32         12        256      11151   nrf_log_backend_serial.o
+        92          8          0          0         28       6726   nrf_log_frontend.o
+       668         58          0          4          0       2719   system_nrf52.o
 
     ----------------------------------------------------------------------
-     13260        902       1256         52       9796     322872   Object Totals
+     13260        902       1256         52       9796     319149   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         24          0          1          0          0          0   (incl. Padding)
 
@@ -1866,8 +1865,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     14760        970       1392         52       9796     312132   Grand Totals
-     14760        970       1392         52       9796     312132   ELF Image Totals
+     14760        970       1392         52       9796     308409   Grand Totals
+     14760        970       1392         52       9796     308409   ELF Image Totals
      14760        970       1392         52          0          0   ROM Totals
 
 ==============================================================================

@@ -32,24 +32,24 @@ int main(void)
   NRF_LOG_INFO("init");
 	nrf_delay_ms(10);
 	initHT16K33(HT16K33_ADDRESS);
-		nrf_delay_ms(10);
-initHT16K33(HT16K33_ADDRESS2);
+	nrf_delay_ms(10);
+	initHT16K33(HT16K33_ADDRESS2);
 	nrf_delay_ms(10);
 	gpio_init(14);
 	NRF_LOG_FLUSH();
 	clearHT16K33();
-			printFloat(12);
-			writeDisplayHT16K33(HT16K33_ADDRESS2);
-			nrf_delay_ms(10);
+	printFloat(12);
+	writeDisplayHT16K33(HT16K33_ADDRESS2);
+	nrf_delay_ms(10);
   while (true)
   {
-		/*clearHT16K33();
+		clearHT16K33();
 			pin_value = nrf_gpio_pin_read(14);
 			NRF_LOG_INFO("pin_value %u \n", pin_value);
 			if(pin_value!=0) pin_value = 1;
 			writeDigitNumHT16K33(5, pin_value, false);
 			writeDisplayHT16K33(HT16K33_ADDRESS);
-			nrf_delay_ms(10);*/
+			nrf_delay_ms(10);
 			NRF_LOG_FLUSH();
 			
 
