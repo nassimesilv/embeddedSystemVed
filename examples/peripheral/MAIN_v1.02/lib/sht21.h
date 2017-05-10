@@ -1,0 +1,8 @@
+SHT21_ADDRESS = 0x40,
+
+TEMP_HOLD	= 0xE3,
+HUMIDITY_HOLD = 0xE5,
+TEMP_NOHOLD = 0xF3,
+HUMIDITY_NOHOLD = 0xF5,
+
+static uint8_t m_sample;
