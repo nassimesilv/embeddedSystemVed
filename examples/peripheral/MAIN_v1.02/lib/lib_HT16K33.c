@@ -114,7 +114,7 @@ void printChrono(uint16_t sec, uint16_t min)
     long ret = strtol(s1, &p, 10);
     writeDigitNumHT16K33(5, ret, false);
     writeDigitNumHT16K33(3, 0, false);
-    s1[0]=n[0];
+    s1[0]=m[0];
     ret = strtol(s1, &p, 10);
     writeDigitNumHT16K33(1, ret, false);
     writeDigitNumHT16K33(0, 0, false);

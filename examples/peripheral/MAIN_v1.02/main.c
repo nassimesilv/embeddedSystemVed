@@ -72,6 +72,7 @@ int main(void)
 	nrf_delay_ms(10);    // Test limit
 
 	//init GPIO
+	NRF_LOG_INFO("GPIO init\n");
 	gpio_init(HOA2001_PIN); //fourche optique
 	gpio_init(14);          //bouton poussoir
 
@@ -87,21 +88,22 @@ int main(void)
 	writeNullChrono();
 	writeDisplayHT16K33(HT16K33_ADDRESS3);
 	nrf_delay_ms(10);
-	writeNull(HT16K33_ADDRESS2);
+	writeNull();
 	writeDisplayHT16K33(HT16K33_ADDRESS2);
 	nrf_delay_ms(10);
+
+	//Initialize SAADC
 
 	//Variables
 	NRF_LOG_INFO("Declaring variables : \n");
 	uint8_t num_laps;
-	uint32_t time_ms = 1000; //Time(in miliseconds) between consecutive compare events.
-	uint32_t time_ticks;
 	uint32_t err_code = NRF_SUCCESS;
 	uint32_t chronoNow;
 	uint32_t buttonBeginPush;
 	uint8_t isChronoBegin = 0;
 
 	//Init timer
+	NRF_LOG_INFO("Init Timer\n");
 	initTimer();
 
 	NRF_LOG_FLUSH();
@@ -118,7 +120,7 @@ int main(void)
 		else if (pin_value_after==1 && pin_value_before==0 && (chrono - buttonBeginPush) > 2 && isChronoBegin == 0 )  //if it's a long push and system isn't start we start it
 		{
 			chrono = 0;
-			num_laps = 0
+			num_laps = 0;
 			isChronoBegin = 1;
 		}
 		else if (pin_value_after==1 && pin_value_before==0 && (chrono - buttonBeginPush) >= 2 && isChronoBegin == 1)  //if it's a long push and the system is start we stop it
@@ -137,16 +139,16 @@ int main(void)
 			writeDisplayHT16K33(HT16K33_ADDRESS3);
 			nrf_delay_ms(10);
 		}
-		pin_value_before = nrf_gpio_pin_read(BUTTON)				//read button value before to compare
+		pin_value_before = nrf_gpio_pin_read(BUTTON);				//read button value before to compare
 
 		if(isChronoBegin == 1)															//We only display number of laps and chrono when button is pressed 3 seconds
 		{
 			printChrono(chronoSec, chronoMin);
 			writeDisplayHT16K33(HT16K33_ADDRESS);
 			nrf_delay_ms(10);
-			*//*printChrono(chronoLapSec, chronoLapMin);
-			writeDisplayHT16K33(HT16K33_ADDRESS4);
-			nrf_delay_ms(10);*//*
+			//printChrono(chronoLapSec, chronoLapMin);
+			//writeDisplayHT16K33(HT16K33_ADDRESS4);
+			//nrf_delay_ms(10);*//*
 
 		}
 		else if(isChronoBegin == 2)													//Stop scenario
@@ -162,8 +164,8 @@ int main(void)
 			nrf_delay_ms(10);
 		}
 
-		NRF_LOG_INFO("température : %f", GetTemperature());
-		NRF_LOG_INFO("humidité : %f", GetHumidity());
+		//NRF_LOG_INFO("température : %f", GetTemperature());
+		//NRF_LOG_INFO("humidité : %f", GetHumidity());
 	}*/
 
 	//TEST PUSH BUTTON
@@ -200,7 +202,7 @@ int main(void)
 		printFloat(num_laps);
 		writeDisplayHT16K33(HT16K33_ADDRESS2);
 	}
-	pin_value_before = nrf_gpio_pin_read(BUTTON)				//read button value before to compare
+	pin_value_before = nrf_gpio_pin_read(BUTTON);				//read button value before to compare
 	*/
 
 	//TEST STORE chrono
@@ -211,7 +213,7 @@ int main(void)
 	pin_value_after = nrf_gpio_pin_read(BUTTON);   			//read button value
 	if (pin_value_after==0 && pin_value_before==1)			//test if there's an invert on button value
 	{
-		num_laps++
+		num_laps++;
 		printFloat(num_laps);
 		writeDisplayHT16K33(HT16K33_ADDRESS2);
 		printChrono(chronoSec, chronoMin);
@@ -229,7 +231,7 @@ int main(void)
 	else if (pin_value_after==1 && pin_value_before==0 && (chrono - buttonBeginPush) > 2 && isChronoBegin == 0 )  //if it's a long push and system isn't start we start it
 	{
 		chrono = 0;
-		num_laps = 0
+		num_laps = 0;
 		isChronoBegin = 1;
 	}
 	else if (pin_value_after==1 && pin_value_before==0 && (chrono - buttonBeginPush) >= 2 && isChronoBegin == 1)  //if it's a long push and the system is start we stop it
@@ -251,16 +253,7 @@ int main(void)
 	pin_value_before = nrf_gpio_pin_read(BUTTON)				//read button value before to compare
 	*/
 
-}
-
-
-
-
-
-
-
-
-//TEST FATFS
+	//TEST FATFS
 
 /*if(isChronoBegin == 1)
 {
@@ -268,8 +261,19 @@ int main(void)
 	char data[]={
 		sprintf(value, "%u;", num_laps),
 		sprintf(value, "%u;", chrono),
-		sprintf(value, "%f;", GetHumidity()),
-		sprintf(value, "%f;", GetTemperature()),
 	}
 	fatfs_example("test.txt", data);
 }*/
+
+	//TEST SAADC
+	/*
+	__WFE();
+	*/
+
+
+
+	NRF_LOG_FLUSH();
+
+
+	}
+}

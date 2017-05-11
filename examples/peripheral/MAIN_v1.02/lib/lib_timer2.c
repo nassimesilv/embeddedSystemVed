@@ -1,10 +1,11 @@
 const nrf_drv_timer_t TIMER = NRF_DRV_TIMER_INSTANCE(0);
 uint8_t chronoSec = 0;
-unit8_t chronoMin = 0;
+uint8_t chronoMin = 0;
 uint32_t chrono = 0;
 uint8_t chronoLapSec = 0;
-unit8_t chronoLapMin = 0;
-
+uint8_t chronoLapMin = 0;
+uint32_t time_ms = 1000; //Time(in miliseconds) between consecutive compare events.
+uint32_t time_ticks;
 
 /**
  * @brief Handler for timer events.
@@ -24,7 +25,7 @@ void timer_event_handler(nrf_timer_event_t event_type, void* p_context)
               chronoSec++;
               chronoLapSec++;
             }
-            else()
+            else
             {
               chronoSec = 0;
               chronoLapSec = 0;
@@ -45,6 +46,7 @@ void timer_event_handler(nrf_timer_event_t event_type, void* p_context)
 
 void initTimer()
 {
+	ret_code_t err_code;
   //Configure all leds on board. Test phase to erase in the final system
 	bsp_board_leds_init();
 

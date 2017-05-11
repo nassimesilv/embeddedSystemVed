@@ -5,7 +5,7 @@
 <h2>Tool Versions:</h2>
 IDE-Version: µVision V5.23.0.0
 Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: Tim Lonchambon, Pôle Leonard de Vinci, LIC=----
+License Information: nassim dahmani, esilv, LIC=----
  
 Tool Versions:
 Toolchain:       MDK-Lite  Version: 5.23
@@ -21,7 +21,7 @@ Target DLL:      Segger\JL2CM3.dll V2.99.23.0
 Dialog DLL:      TCM.DLL V1.27.0.0
  
 <h2>Project:</h2>
-C:\Users\TIM\Documents\ESILV\VED\SE\embeddedSystemVed\examples\peripheral\MAIN\pca10040\blank\arm5_no_packs\twi_scanner_pca10040.uvprojx
+C:\Users\nassim\Downloads\embeddedSystemVed\examples\peripheral\MAIN_v1.02\pca10040\blank\arm5_no_packs\twi_scanner_pca10040.uvprojx
 Project File Date:  05/08/2017
 
 <h2>Output:</h2>
@@ -30,19 +30,19 @@ Build target 'nrf52832_xxaa'
 compiling main.c...
 ..\..\..\lib/lib_fatfs.c(24): warning:  #177-D: variable "dir"  was declared but never referenced
       static DIR dir;
-..\..\..\lib/lib_cap_courant.c(103): warning:  #1-D: last line of file ends without a newline
-  }
-..\..\..\lib/lib_timer2.c(33): warning:  #1-D: last line of file ends without a newline
-   */
-..\..\..\main.c(61): warning:  #177-D: variable "num_laps"  was declared but never referenced
-  	uint8_t num_laps = 0;
-..\..\..\main.c(64): warning:  #177-D: variable "buffer_sd"  was declared but never referenced
-  	uint8_t buffer_sd[SIZE_BUFFER_SD];
-..\..\..\main.c(73): warning:  #177-D: variable "counter"  was declared but never referenced
-    uint16_t counter = 0;
+..\..\..\main.c(96): warning:  #177-D: variable "num_laps"  was declared but never referenced
+  	uint8_t num_laps;
+..\..\..\main.c(97): warning:  #177-D: variable "err_code"  was declared but never referenced
+  	uint32_t err_code = NRF_SUCCESS;
+..\..\..\main.c(98): warning:  #177-D: variable "chronoNow"  was declared but never referenced
+  	uint32_t chronoNow;
+..\..\..\main.c(99): warning:  #177-D: variable "buttonBeginPush"  was declared but never referenced
+  	uint32_t buttonBeginPush;
+..\..\..\main.c(100): warning:  #177-D: variable "isChronoBegin"  was declared but never referenced
+  	uint8_t isChronoBegin = 0;
 ..\..\..\main.c: 6 warnings, 0 errors
 linking...
-Program Size: Code=19360 RO-data=1532 RW-data=84 ZI-data=10932  
+Program Size: Code=9444 RO-data=1364 RW-data=60 ZI-data=9676  
 FromELF: creating hex file...
 ".\_build\nrf52832_xxaa.axf" - 0 Error(s), 6 Warning(s).
 
@@ -64,7 +64,7 @@ Package Vendor: NordicSemiconductor
   .\RTE\_nrf52832_xxaa
   C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include
   C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.11.1\Device\Include
-  C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.12.0\Device\Include
+  C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.13.0\Device\Include
 
 <h2>Collection of Component Files used:</h2>
 
@@ -72,9 +72,9 @@ Package Vendor: NordicSemiconductor
 
    * Component: NordicSemiconductor::Device:Startup:8.11.1
       Source file:   Device\Source\arm\arm_startup_nrf52.s
-      Include file:  Device\Include\system_nrf52.h
       Source file:   Device\Source\system_nrf52.c
-Build Time Elapsed:  00:00:04
+      Include file:  Device\Include\system_nrf52.h
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>
