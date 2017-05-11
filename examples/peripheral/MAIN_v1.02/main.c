@@ -51,13 +51,14 @@ uint8_t pin_value_before;
 
 //Capteur Humidité température
 
-#include "lib/sht21.c"
+//#include "lib/sht21.c"
 
 
 // TIMER
 
 #include <stdbool.h>
 #include "lib/lib_timer2.c"
+
 
 int main(void)
 {
@@ -83,6 +84,7 @@ int main(void)
 	writeNullChrono();
 	writeDisplayHT16K33(HT16K33_ADDRESS);
 	nrf_delay_ms(10);
+	writeNullChrono();
 	writeDisplayHT16K33(HT16K33_ADDRESS3);
 	nrf_delay_ms(10);
 	writeNull(HT16K33_ADDRESS2);
@@ -106,6 +108,7 @@ int main(void)
 
 	while (true)
   {
+		/*
 		//Module Begin System
 		pin_value_after = nrf_gpio_pin_read(BUTTON);   			//read button value
 		if (pin_value_after==0 && pin_value_before==1 && isChronoBegin == 0)			//test if there's an invert on button value
@@ -141,9 +144,9 @@ int main(void)
 			printChrono(chronoSec, chronoMin);
 			writeDisplayHT16K33(HT16K33_ADDRESS);
 			nrf_delay_ms(10);
-			/*printChrono(chronoLapSec, chronoLapMin);
+			*//*printChrono(chronoLapSec, chronoLapMin);
 			writeDisplayHT16K33(HT16K33_ADDRESS4);
-			nrf_delay_ms(10);*/
+			nrf_delay_ms(10);*//*
 
 		}
 		else if(isChronoBegin == 2)													//Stop scenario
@@ -161,8 +164,103 @@ int main(void)
 
 		NRF_LOG_INFO("température : %f", GetTemperature());
 		NRF_LOG_INFO("humidité : %f", GetHumidity());
+	}*/
+
+	//TEST PUSH BUTTON
+	/*
+	pin_value_after = nrf_gpio_pin_read(BUTTON);
+	writeDigitNumHT16K33(5, pin_value_after, false);
+	writeDisplayHT16K33(HT16K33_ADDRESS);
+	nrf_delay_ms(10);
+	pin_value_before = nrf_gpio_pin_read(BUTTON);
+	writeDigitNumHT16K33(5, pin_value_before, false);
+	writeDisplayHT16K33(HT16K33_ADDRESS3);
+	nrf_delay_ms(10);
+	*/
+
+	//TEST PRINT FLOAT
+	/*
+	num_laps++;
+	printFloat(num_laps);
+	writeDisplayHT16K33(HT16K33_ADDRESS2);
+	*/
+
+	//TEST PRINT CHRONO
+	/*
+	printChrono(chronoSec, chronoMin);
+	writeDisplayHT16K33(HT16K33_ADDRESS3);
+	*/
+
+	//TEST ADD LAP
+	/*
+	pin_value_after = nrf_gpio_pin_read(BUTTON);   			//read button value
+	if (pin_value_after==0 && pin_value_before==1)			//test if there's an invert on button value
+	{
+		num_laps++;
+		printFloat(num_laps);
+		writeDisplayHT16K33(HT16K33_ADDRESS2);
 	}
+	pin_value_before = nrf_gpio_pin_read(BUTTON)				//read button value before to compare
+	*/
+
+	//TEST STORE chrono
+	/*
+	printChrono(chronoSec, chronoMin);
+	writeDisplayHT16K33(HT16K33_ADDRESS3);
+
+	pin_value_after = nrf_gpio_pin_read(BUTTON);   			//read button value
+	if (pin_value_after==0 && pin_value_before==1)			//test if there's an invert on button value
+	{
+		num_laps++
+		printFloat(num_laps);
+		writeDisplayHT16K33(HT16K33_ADDRESS2);
+		printChrono(chronoSec, chronoMin);
+		writeDisplayHT16K33(HT16K33_ADDRESS);
+	}
+	*/
+
+	//TEST START STOP system
+	/*
+	pin_value_after = nrf_gpio_pin_read(BUTTON);   			//read button value
+	if (pin_value_after==0 && pin_value_before==1 && isChronoBegin == 0)			//test if there's an invert on button value
+	{
+		buttonBeginPush = chrono;
+	}
+	else if (pin_value_after==1 && pin_value_before==0 && (chrono - buttonBeginPush) > 2 && isChronoBegin == 0 )  //if it's a long push and system isn't start we start it
+	{
+		chrono = 0;
+		num_laps = 0
+		isChronoBegin = 1;
+	}
+	else if (pin_value_after==1 && pin_value_before==0 && (chrono - buttonBeginPush) >= 2 && isChronoBegin == 1)  //if it's a long push and the system is start we stop it
+	{
+		isChronoBegin = 2;
+	}
+	else if(pin_value_after==0 && pin_value_before==1 && isChronoBegin == 1)																		 //if it's a short push we add a lap and fix the chrono on an other screen
+	{
+		num_laps++;
+		chronoLapSec = 0;
+		chronoMin = 0;
+		printFloat(num_laps);
+		writeDisplayHT16K33(HT16K33_ADDRESS2);
+		nrf_delay_ms(10);
+		printChrono(chronoSec, chronoMin);
+		writeDisplayHT16K33(HT16K33_ADDRESS3);
+		nrf_delay_ms(10);
+	}
+	pin_value_before = nrf_gpio_pin_read(BUTTON)				//read button value before to compare
+	*/
+
 }
+
+
+
+
+
+
+
+
+//TEST FATFS
 
 /*if(isChronoBegin == 1)
 {
