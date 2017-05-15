@@ -7,6 +7,8 @@ uint8_t chronoLapSec = 0;
 uint8_t chronoLapMin = 0;
 uint32_t time_ms = 1; //Time(in miliseconds) between consecutive compare events.
 uint32_t time_ticks;
+
+
 /**
  * @brief Handler for timer events.
  */
@@ -49,7 +51,12 @@ void timer_event_handler(nrf_timer_event_t event_type, void* p_context)
     }
 }
 
-
+/**
+ *  \fn     	initTimer
+ *  \brief  	init the timer with the default config
+ *  \param[in]	none
+ *  \return 	no return
+ */
 void initTimer()
 {
 	ret_code_t err_code;

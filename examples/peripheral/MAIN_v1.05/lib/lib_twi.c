@@ -1,5 +1,10 @@
 #include "lib_twi.h"
 
+/**
+ *  \fn     	data_handler
+ *  \param[in]	uint8_t temp température
+ *  \return 	no return
+ */
 __STATIC_INLINE void data_handler(uint8_t temp)
 {
     NRF_LOG_INFO("Temperature: %d Celsius degrees.\r\n", temp);
@@ -24,6 +29,12 @@ void twi_handler(nrf_drv_twi_evt_t const * p_event, void * p_context)
     }
 }
 
+/**
+ *  \fn     	twi_init
+ *  \brief   initialize i2c with defaut config
+ *  \param[in]	none
+ *  \return 	no return
+ */
 void twi_init (void)
 {
     ret_code_t err_code;

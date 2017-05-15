@@ -59,7 +59,8 @@
 //VARIABLES
 
 #define FILE_NAME   "MEASURE.csv"
-#define SIZE_BUFFER_SD 1000
+#define SIZE_BUFFER_SD 1000              	//size sd card
+#define PUSH_TIME	2												//push time to start and stop system
 
 uint8_t num_laps = 0;
 uint32_t buttonBeginPush;									//time when the system isn't started and the button is pushed permit to test if it's a long push
@@ -153,7 +154,7 @@ int main(void)
 			chronoLapSec = 0;																															//Restart chrono of the current lap
 			chronoLapMin = 0;
 		}
-		else if (button_value_after==1 && pin_value_before==0 && (chronoTotalSec - buttonBeginPush2) >= 2 && stateSystem == 0)  //if it's a long push and system isn't start we start it
+		else if (button_value_after==1 && pin_value_before==0 && (chronoTotalSec - buttonBeginPush2) >= PUSH_TIME && stateSystem == 0)  //if it's a long push and system isn't start we start it
 		{
 			chronoSec = 0;
 			chronoMin = 0;
@@ -162,7 +163,7 @@ int main(void)
 
 			stateSystem = 1;
 		}
-		else if (button_value_after==1 && pin_value_before==0 && (chronoTotalSec - buttonBeginPush2) >= 2 && stateSystem == 1)  //if it's a long push and the system is start we stop it
+		else if (button_value_after==1 && pin_value_before==0 && (chronoTotalSec - buttonBeginPush2) >= PUSH_TIME && stateSystem == 1)  //if it's a long push and the system is start we stop it
 		{
 			stateSystem = 0;
 

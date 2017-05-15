@@ -1,5 +1,13 @@
 #include "lib_HT16K33.h"
 
+
+/**
+ *  \fn     	setBrightness
+ *  \brief  	set the brightness of the screen
+ *  \param[in]	uint8_t brightness from 0 to 15
+                uint8_t address 8 bit i2c adress
+ *  \return 	no return
+ */
 void setBrightness(uint8_t brightness, uint8_t address)
 {
   uint8_t reg[2] = {HT16K33_CMD_BRIGHTNESS | brightness };
@@ -8,6 +16,13 @@ void setBrightness(uint8_t brightness, uint8_t address)
   APP_ERROR_CHECK(rc);
 }
 
+/**
+ *  \fn     	blinkRate
+ *  \brief  	set the blinkRate of the screen
+ *  \param[in]	uint8_t blinkRate from 0 to 3
+                uint8_t address 8 bit i2c adress
+ *  \return 	no return
+ */
 void blinkRate(uint8_t blinkRate, uint8_t address)
 {
   uint8_t reg[1]={HT16K33_BLINK_CMD | HT16K33_BLINK_DISPLAYON | (blinkRate<<1) };
@@ -17,17 +32,29 @@ void blinkRate(uint8_t blinkRate, uint8_t address)
   APP_ERROR_CHECK(rc);
 }
 
+/**
+ *  \fn     	initHT16K33
+ *  \brief  	initialize the screen oscillator, blinkRate and brightness
+ *  \param[in]	uint8_t address 8 bit i2c adress
+ *  \return 	no return
+ */
 void initHT16K33(uint8_t address)
 {
   uint8_t reg[1] = {0x21};
   rc = nrf_drv_twi_tx(&m_twi, address, reg, sizeof(reg), false);
   APP_ERROR_CHECK(rc);
   nrf_delay_ms(10);
-  blinkRate(0, address);
+  blinkRate(HT16K33_BLINK_OFF, address);
   nrf_delay_ms(10);
-  setBrightness(15, address); //max 15
+  setBrightness(BRIGHTNESS, address); //max 15
 }
 
+/**
+ *  \fn     	writeDisplayHT16K33
+ *  \brief  	write in the register of the screen, in order to display on the writeDisplayHT16K33 have to be called too
+ *  \param[in]	uint8_t address 8 bit i2c adress
+ *  \return 	no return
+ */
 void writeDisplayHT16K33(uint8_t address)
 {
 
@@ -53,6 +80,12 @@ void writeDisplayHT16K33(uint8_t address)
   APP_ERROR_CHECK(rc);
 }
 
+/**
+ *  \fn     	clearHT16K33
+ *  \brief  	clear the buffer where we store the command before sending it by i2c to the screen
+ *  \param[in]	none
+ *  \return 	no return
+ */
 void clearHT16K33(void)
 {
   uint8_t i;
@@ -62,11 +95,26 @@ void clearHT16K33(void)
   }
 }
 
+/**
+ *  \fn     	writeDigitRawHT16K33
+ *  \brief  	write in the buffer where we store the command before sending it by i2c to the screen
+ *  \param[in]	uint8_t position position on the screen
+                uint8_t bitmask 8-bit raw value we want to write
+ *  \return 	no return
+ */
 void writeDigitRawHT16K33(uint8_t position, uint8_t bitmask) {
   if (position > 5) return;
   displaybuffer[position] = bitmask;
 }
 
+/**
+ *  \fn     	writeDigitNumHT16K33
+ *  \brief  	write a number in the buffer where we store the command before sending it by i2c to the screen
+ *  \param[in]	uint8_t position position on the screen
+                uint8_t num number we want to write [0-9][a-f]
+                bool dot if we want a point at the botom of the digit
+ *  \return 	no return
+ */
 void writeDigitNumHT16K33(uint8_t position, uint8_t num, bool dot) {
   if (position > 5) return;
 
@@ -74,13 +122,24 @@ void writeDigitNumHT16K33(uint8_t position, uint8_t num, bool dot) {
 }
 
 
-
+/**
+ *  \fn     	printErrorHT16K33
+ *  \brief  	print error on the screen
+ *  \param[in]	none
+ *  \return 	no return
+ */
 void printErrorHT16K33(void) {
   for(uint8_t i = 0; i < SEVENSEG_DIGITS; ++i) {
     writeDigitRawHT16K33(i, (i == 2 ? 0x00 : 0x40));
   }
 }
 
+/**
+ *  \fn     	drawColonHT16K33
+ *  \brief  	store the command to draw a colon the buffer we will send via i2c to the screen
+ *  \param[in]	bool state if we want the colon
+ *  \return 	no return
+ */
 void drawColonHT16K33(bool state) {
   if (state)
   displaybuffer[2] = 0x2;
@@ -88,6 +147,12 @@ void drawColonHT16K33(bool state) {
   displaybuffer[2] = 0;
 }
 
+/**
+ *  \fn     	drawColonHT16K33
+ *  \brief  	display a colon on the screen
+ *  \param[in]	none
+ *  \return 	no return
+ */
 void writeColonHT16K33(void) {
 
   uint8_t reg[3];
@@ -100,6 +165,15 @@ void writeColonHT16K33(void) {
 
 }
 
+/**
+ *  \fn     	printChrono
+ *  \brief  	print a chrono on the display by storing each digit of a int in a tab, then each case of the tab is turning in an int and written in the write place
+              ex: 25 secondes [{2},{5}] write 2 to digit 3 and 5 to digit 4
+              Then same for minutes and writes two dots of the chrono (writting any value on the second digit)
+ *  \param[in]	uint8_t sec seconds of the chrono
+                uint8_t min minuts of the chrono
+ *  \return 	no return
+ */
 void printChrono(uint16_t sec, uint16_t min)
 {
   char s[5];
@@ -171,7 +245,12 @@ void printChrono(uint16_t sec, uint16_t min)
 }
 
 
-
+/**
+ *  \fn     	printFloat
+ *  \brief  	same as chrono but only for a two digit number (int and not float)
+ *  \param[in]	uint16_t n the number
+ *  \return 	no return
+ */
 void printFloat(uint16_t n)
 {
 		char s[5];
@@ -234,6 +313,12 @@ void printLaps(uint16_t n)
   }
 }
 
+/**
+ *  \fn     	writeNullChrono
+ *  \brief  	write a null chrono in the buffer where we store the command before sending it by i2c to the screen
+ *  \param[in]	none
+ *  \return 	no return
+ */
 void writeNullChrono()
 {
   writeDigitNumHT16K33(3, 0, false);
@@ -243,12 +328,23 @@ void writeNullChrono()
   writeDigitNumHT16K33(4, 0, false);
 }
 
+/**
+ *  \fn     	writeNull
+ *  \brief  	write a 0 on the first screen in the buffer where we store the command before sending it by i2c to the screen
+ *  \param[in]	none
+ *  \return 	no return
+ */
 void writeNull()
 {
   writeDigitNumHT16K33(5, 0, false);
 }
 
-
+/**
+ *  \fn     	initAllScreens
+ *  \brief  	init all the screens
+ *  \param[in]	none
+ *  \return 	no return
+ */
 void initAllScreens()
 {
   initHT16K33(HT16K33_ADDRESS);
@@ -265,15 +361,12 @@ void initAllScreens()
 	nrf_delay_ms(10);
 }
 
-void clearAllScreens()
-{
-  clearHT16K33();
-	writeDisplayHT16K33(HT16K33_ADDRESS2);
-	nrf_delay_ms(10);
-	writeDisplayHT16K33(HT16K33_ADDRESS2);
-	nrf_delay_ms(10);
-}
-
+/**
+ *  \fn     	setScreenBegin
+ *  \brief  	write a null chrono on three screens and a 0 on three other screens
+ *  \param[in]	none
+ *  \return 	no return
+ */
 void setScreenBegin()
 {
   writeNullChrono();
